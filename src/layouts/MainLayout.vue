@@ -1,9 +1,9 @@
 <template>
   <div class="main-layout">
     <sidebar/>
-    <div class="main-wrapper">
+    <div class="main-wrapper flex flex-column">
         <profile-menu/>
-        <div class="main-router-content">
+        <div class="main-router-content grow overflow-y-scroll">
             <slot/>
         </div>
     </div>
@@ -34,5 +34,8 @@ export default {
 }
 .main-layout .main-wrapper{
     flex-grow: 1;
+}
+.main-router-content::-webkit-scrollbar{
+    display: none;
 }
 </style>
