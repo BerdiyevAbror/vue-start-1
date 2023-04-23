@@ -1,11 +1,14 @@
 import { createStore } from "vuex";
+import ui from './ui'
 
 const store = createStore({
-  state() {},
+  state(){},
   mutations: {},
   getters:{},
   actions:{},
-  modules:{}
+  modules:{
+    ui,
+  }
   
 });
 

@@ -25,7 +25,7 @@ export default [
     },
     {
         name: 'Dashboard',
-        icon: 'fas fa',
+        icon: 'fas fa-home',
         routeName: 'dashboard',
         child:['']
     },

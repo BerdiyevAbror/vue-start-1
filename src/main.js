@@ -3,7 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 
 import './tailwind.css'
-import store from "./Store";
+import store from "./store/main";
 
 
 import { createVuetify } from "vuetify";

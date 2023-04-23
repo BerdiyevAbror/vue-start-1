@@ -1,18 +1,30 @@
 <template>
-    <v-container>
-        <v-banner color="pink-darken-1" icon="mdi-account-box" lines="two">
-            <template v-slot:prepend>
-                <v-avatar></v-avatar>
-            </template>
-
-            <v-banner-text>
-                Banner with two lines of text. If the text is too long to fit on two lines then an ellipsis will be used to
-                hide the remaining content. So this next line will be hidden.
-            </v-banner-text>
-
-            <v-banner-actions>
-                <v-btn @click="$router.push('/login')">Action Button</v-btn>
-            </v-banner-actions>
-        </v-banner>
-    </v-container>
+  <v-container>
+    <h2 class="text-4xl mb-5 font-bold ">Invoicess</h2>
+    <Vue3EasyDataTable show-index :headers="headers" :items="items"> </Vue3EasyDataTable>
+  </v-container>
 </template>
+
+<script>
+import Vue3EasyDataTable from "vue3-easy-data-table";
+import "vue3-easy-data-table/dist/style.css";
+
+export default {
+  data() {
+    return {
+      headers: [
+        { text: "Name", value: "name" },
+        { text: "Height (cm)", value: "height", sortable: true },
+        { text: "Weight (kg)", value: "weight", sortable: true },
+        { text: "Age", value: "age", sortable: true },
+      ],
+      items: [
+        { name: "Curry", height: 178, weight: 77, age: 20 },
+        { name: "James", height: 180, weight: 75, age: 21 },
+        { name: "Jordan", height: 181, weight: 73, age: 22 },
+      ],
+    };
+  },
+  components: { Vue3EasyDataTable },
+};
+</script>
